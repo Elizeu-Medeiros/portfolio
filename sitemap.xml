@@ -2,11 +2,20 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
   <loc>https://elizeu-medeiros.github.io/index.html</loc>
+  <priority>0.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2022-05-03</lastmod>
 </url>
 <url>
   <loc>https://elizeu-medeiros.github.io/file/elizeu-medeiros-02-05-22.pdf</loc>
+  <priority>0.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2022-05-03</lastmod>
 </url>
 <url>
   <loc>https://elizeu-medeiros.github.io/portfolio/index.html</loc>
+  <priority>0.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2022-05-03</lastmod>
 </url>
 </urlset>
