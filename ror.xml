@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://elizeu-medeiros.github.io/portfolio/</title>
+  <link>https://elizeu-medeiros.github.io/portfolio/</link>
+
+<item>
+     <link>https://elizeu-medeiros.github.io/portfolio/</link>
+     <title>Elizeu Medeiros - Desenvolvedor Full Stack</title>
+     <description>Elizeu Medeiros - Desenvolvedor Full Stack</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://elizeu-medeiros.github.io/portfolio/index.html</link>
+     <title>Elizeu Medeiros - Desenvolvedor Full Stack</title>
+     <description>Elizeu Medeiros - Desenvolvedor Full Stack</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://elizeu-medeiros.github.io/portfolio/file/elizeu-medeiros-02-05-22.pdf</link>
+     <title></title>
+     
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
