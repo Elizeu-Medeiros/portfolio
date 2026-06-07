@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://elizeu-medeiros.github.io/portfolio/sitemap.xml
