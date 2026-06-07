@@ -18,7 +18,8 @@
     <!-- <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">git  -->
 
     <link rel="preload" href="images/elizeu-medeiros.jpg" as="image" fetchpriority="high">
-    <link rel="preload" href="css/open-iconic-bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="css/open-iconic-bootstrap.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -43,10 +44,11 @@
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 
+    <a class="skip-link" href="#about-section">Pular para o conteúdo</a>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><span>E</span>lizeu Medeiros</a>
+            <a class="navbar-brand" href="./"><span>E</span>lizeu Medeiros</a>
             <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
                 data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
@@ -56,11 +58,12 @@
                 <ul class="navbar-nav nav ml-auto">
                     <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
                     <li class="nav-item"><a href="#about-section" class="nav-link"><span>Sobre</span></a></li>
+                    <li class="nav-item"><a href="#solutions-section" class="nav-link"><span>Soluções</span></a></li>
                     <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resumo</span></a></li>
                     <!-- <li class="nav-item"><a href="#services-section" class="nav-link"><span>Serviços</span></a></li> -->
                     <!-- <li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projetos</span></a></li> -->
                     <!-- <li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li> -->
-                    <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contato</span></a></li>
+                    <li class="nav-item cta"><a href="#contact-section" class="nav-link"><span>Contato</span></a></li>
                 </ul>
             </div>
         </div>
@@ -68,22 +71,100 @@
     <section class="hero-wrap js-fullheight">
         <div class="overlay"></div>
         <div class="container">
-            <div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
-                <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-center">
-                    <div class="text text-center">
+            <div class="row no-gutters slider-text js-fullheight justify-content-between align-items-center">
+                <div class="col-lg-7 col-md-7 ftco-animate d-flex align-items-center">
+                    <div class="text hero-copy">
                         <span class="subheading">Olá! Eu sou</span>
                         <h1>Elizeu Medeiros</h1>
                         <h2>E atuo com
                             <span class="txt-rotate" data-period="2000"
                                 data-rotate='[ "Arquitetura de Software", "Cloud Computing", "Desenvolvimento Web", "PHP", "Java", "Angular", "JavaScript", "MySql..." ]'></span>
                         </h2>
+                        <p class="hero-summary">Ajudo empresas a evoluir sistemas críticos, modernizar aplicações web
+                            e entregar produtos digitais com backend sólido, frontend eficiente e infraestrutura
+                            preparada para crescer.</p>
+                        <div class="hero-actions">
+                            <a href="#contact-section" class="btn btn-primary py-3 px-4">Agendar conversa</a>
+                            <a target="_blank" rel="noopener" href="file/elizeu-medeiros-12-06-25.pdf"
+                                class="btn btn-primary btn-outline-primary py-3 px-4">Ver currículo</a>
+                        </div>
+                        <div class="hero-highlights" aria-label="Principais diferenciais">
+                            <span>15+ anos de experiência</span>
+                            <span>Sistemas corporativos</span>
+                            <span>Cloud, Docker e CI/CD</span>
+                        </div>
+                        <div class="hero-proof">
+                            <div>
+                                <strong>Banco</strong>
+                                <span>experiência em missão crítica</span>
+                            </div>
+                            <div>
+                                <strong>Full stack</strong>
+                                <span>Java, PHP, Angular e APIs</span>
+                            </div>
+                            <div>
+                                <strong>Arquitetura</strong>
+                                <span>escalabilidade e sustentação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-5 d-none d-md-flex justify-content-center ftco-animate">
+                    <div class="hero-portrait" aria-label="Foto de Elizeu Medeiros">
+                        <img src="images/elizeu-medeiros.jpg" alt="Elizeu Medeiros" width="1080" height="1080"
+                            fetchpriority="high" loading="eager" decoding="async">
+                        <div class="hero-availability">
+                            <span class="status-dot"></span>
+                            Disponível para projetos
+                        </div>
                     </div>
                 </div>
                 <div class="mouse">
-                    <a href="#" class="mouse-icon">
+                    <a href="#about-section" class="mouse-icon" aria-label="Ir para a seção sobre">
                         <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="company-fit" id="solutions-section">
+        <div class="container">
+            <div class="section-kicker text-center">Como posso ajudar</div>
+            <h2 class="company-fit-title text-center">Soluções para empresas que precisam de tecnologia confiável</h2>
+            <div class="row">
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="solution-card">
+                        <span class="solution-icon icon-code"></span>
+                        <h3>Desenvolvimento web</h3>
+                        <p>Criação e evolução de sistemas com backend robusto, frontend responsivo e integrações bem
+                            definidas.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="solution-card">
+                        <span class="solution-icon icon-cogs"></span>
+                        <h3>Modernização</h3>
+                        <p>Refatoração de sistemas legados, melhoria de performance e organização de arquitetura para
+                            reduzir manutenção.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="solution-card">
+                        <span class="solution-icon icon-cloud"></span>
+                        <h3>Cloud e DevOps</h3>
+                        <p>Deploy, Docker, pipelines CI/CD, automação e infraestrutura para ambientes mais previsíveis.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 d-flex">
+                    <div class="solution-card">
+                        <span class="solution-icon icon-handshake-o"></span>
+                        <h3>Contrato PJ</h3>
+                        <p>Atuação em squads, sustentação, projetos sob demanda ou reforço técnico para times internos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="ftco-about img ftco-section ftco-no-pt ftco-no-pb" id="about-section">
@@ -101,30 +182,20 @@
                         <div class="col-md-12 heading-section ftco-animate">
                             <h1 class="big">Sobre</h1>
                             <h2 class="mb-4">Sobre mim</h2>
-                            <br style="align-text: justify">
+                            <p class="lead-intro">Sou Desenvolvedor Full Stack Sênior, com mais de 15 anos criando,
+                                mantendo e evoluindo sistemas web para ambientes de negócio exigentes.</p>
                             <p>
-                                Olá! Sou Elizeu Medeiros, Desenvolvedor Full Stack Sênior, com mais de 15 anos de
-                                experiência em tecnologia.
-                                </br>Iniciei minha trajetória em 2008 como web designer, e desde então venho evoluindo
-                                com foco em engenharia de software, cloud computing e arquitetura de sistemas
-                                escaláveis.
-                                <br>
-                                Ao longo da minha carreira, participei de projetos desafiadores em todo o Brasil,
-                                entregando soluções robustas, seguras e orientadas à performance. Possuo sólida formação
-                                técnica, incluindo duas especializações: Cloud Computing e Arquitetura de Software, além
-                                de ampla experiência com AWS, Docker, CI/CD, DevOps e microsserviços.
-                                <br>
-                                Domino tecnologias como Java (Spring Boot, Quarkus), PHP (Laravel, Yii2, CodeIgniter),
-                                JavaScript/TypeScript, Angular, Ionic, Node.js, MySQL, PostgreSQL e MongoDB. Também atuo
-                                com integração de APIs, segurança, automação e infraestrutura como código.
-                                <br>
-                                Estou sempre em busca de inovação e aprendizado contínuo para entregar valor real aos
-                                projetos que participo. Se você procura alguém comprometido com qualidade,
-                                escalabilidade e visão arquitetural, será um prazer colaborar.
-                                <br>
-
-                                📩 Entre em contato comigo para trocarmos ideias ou falarmos sobre oportunidades. <br />
+                                Trabalho com Java, PHP, JavaScript/TypeScript, Angular, bancos relacionais e
+                                infraestrutura moderna. Minha atuação combina desenvolvimento, arquitetura, cloud,
+                                automação e boas práticas de entrega para construir soluções robustas, seguras e fáceis
+                                de sustentar.
                             </p>
+                            <div class="ux-skill-tags" aria-label="Áreas de atuação">
+                                <span>Arquitetura de Software</span>
+                                <span>Cloud Computing</span>
+                                <span>APIs e integrações</span>
+                                <span>DevOps e CI/CD</span>
+                            </div>
                             <ul class="about-info mt-4 px-md-0 px-2">
                                 <!-- <li class="d-flex"><span>Nome:</span> <span>Elizeu Medeiros</span></li>
                                     <li class="d-flex"><span>Date de Nasc.:</span> <span> 16 de Agosto de 1982</span>
@@ -132,9 +203,9 @@
                                 <!-- <li class="d-flex"><span>Address:</span> <span>San Francisco CA 97987 USA</span></li> -->
                                 <!-- <li class="d-flex"><span>Cidade/UF:</span> <span>Araruama - RJ</span></li> -->
                                 <li class="d-flex"><span>Email:</span> <span><a href="mailto:elizeumedeiros@gmail.com"
-                                            target="_blank">elizeumedeiros@gmail.com</a></span></li>
+                                            target="_blank" rel="noopener">elizeumedeiros@gmail.com</a></span></li>
                                 <li class="d-flex"><span>Celular: </span>
-                                    <span> <a target="_blank"
+                                    <span> <a target="_blank" rel="noopener"
                                             href="https://wa.me/5521981317763/?text=Olá estou vindo através do seu portifólio no Github">+55
                                             (21) 98131-7763
                                             <img src="images/WhatsApp.png" class="img-fluid" alt="Meu WhatsApp"
@@ -149,7 +220,7 @@
                                 <span class="number" data-number="10">0</span>
                                 <span>Projetos completos</span>
                             </p>
-                            <p><a target="_blank" href="file/elizeu-medeiros-12-06-25.pdf"
+                            <p><a target="_blank" rel="noopener" href="file/elizeu-medeiros-12-06-25.pdf"
                                     class="btn btn-primary py-3 px-3">Baixar Currículo</a></p>
                         </div>
                     </div>
@@ -160,38 +231,40 @@
 
     <section class="ftco-section ftco-partner">
         <div class="container">
+            <div class="tech-heading">
+                <span>Stack principal</span>
+                <h2>Tecnologias que uso para construir soluções completas</h2>
+            </div>
             <div class="row">
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/laravel-logo.png" class="img-fluid" alt="Laravel"></a>
+                    <div class="partner"><img src="images/laravel-logo.png" class="img-fluid" alt="Laravel"></div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/codeigniter-logo.png" class="img-fluid"
-                            alt="CodeIgniter"></a>
+                    <div class="partner"><img src="images/codeigniter-logo.png" class="img-fluid" alt="CodeIgniter">
+                    </div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/yii2-logo.png" class="img-fluid"
-                            alt="Yii 2 Frameworks"></a>
+                    <div class="partner"><img src="images/yii2-logo.png" class="img-fluid" alt="Yii 2 Frameworks">
+                    </div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/java.png" class="img-fluid" alt="Java"></a>
+                    <div class="partner"><img src="images/java.png" class="img-fluid" alt="Java"></div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/spring-boot.png" class="img-fluid"
-                            alt="Spring Boot"></a>
+                    <div class="partner"><img src="images/spring-boot.png" class="img-fluid" alt="Spring Boot"></div>
                 </div>
 
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/mysql-logo.png" class="img-fluid" alt="MySQL"></a>
+                    <div class="partner"><img src="images/mysql-logo.png" class="img-fluid" alt="MySQL"></div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/bootstrap-logo.png" class="img-fluid"
-                            alt="Bootstrap"></a>
+                    <div class="partner"><img src="images/bootstrap-logo.png" class="img-fluid" alt="Bootstrap"></div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/angular-logo.png" class="img-fluid" alt="Angular"></a>
+                    <div class="partner"><img src="images/angular-logo.png" class="img-fluid" alt="Angular"></div>
                 </div>
                 <div class="col-sm ftco-animate">
-                    <a href="#" class="partner"><img src="images/ionic-logo.png" class="img-fluid" alt="Ionic"></a>
+                    <div class="partner"><img src="images/ionic-logo.png" class="img-fluid" alt="Ionic"></div>
                 </div>
             </div>
         </div>
@@ -1192,10 +1265,10 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-7 ftco-animate text-center">
-                    <h2>Estou <span>Disponível</span> para freelancer</h2>
-                    <p>No decorre das experiências fiz alguns projetos freela e coloco-me aberto a propostas de
-                        contrato PJ</p>
-                    <p class="mb-0"><a
+                    <h2>Estou <span>disponível</span> para novos projetos</h2>
+                    <p>Atendo projetos sob demanda, contratos PJ e parcerias para evolução de sistemas web,
+                        integrações e arquitetura.</p>
+                    <p class="mb-0"><a target="_blank" rel="noopener"
                             href="https://wa.me/5521981317763/?text=Olá estou vindo através do seu portifólio no Github."
                             class="btn btn-primary py-3 px-5">Contrate-me</a></p>
                 </div>
@@ -1207,10 +1280,9 @@
         <div class="container">
             <div class="row justify-content-center mb-5 pb-3">
                 <div class="col-md-7 heading-section text-center ftco-animate">
-                    <h1 class="big big-2">Contact</h1>
-                    <h2 class="mb-4">Contata-me</h2>
-                    <p>Abaixo, segue meus contatos e para facilitar, simplesmente clique no link e fale diretamente
-                        comigo.</p>
+                    <h1 class="big big-2">Contato</h1>
+                    <h2 class="mb-4">Entre em contato</h2>
+                    <p>Escolha o canal mais prático para conversarmos sobre projetos, contratos ou oportunidades.</p>
                 </div>
             </div>
 
@@ -1233,7 +1305,7 @@
                         </div>
                         <div>
                             <h3 class="mb-4">Celular</h3>
-                            <p><a
+                            <p><a target="_blank" rel="noopener"
                                     href="https://wa.me/5521981317763/?text=Olá estou vindo através do seu portifólio no Github">+55
                                     (21) 98131-7763 &nbsp; <img src="images/WhatsApp.png" class="img-fluid"
                                         alt="Meu Whatsapp" width="20" height="20"></a></p>
@@ -1258,8 +1330,7 @@
                         </div>
                         <div>
                             <h3 class="mb-4">Website</h3>
-                            <p><a
-                                    href="https://elizeu-medeiros.github.io/portfolio/index.html">elizeu-medeiros.github.io</a>
+                            <p><a href="https://elizeu-medeiros.github.io/portfolio/">elizeu-medeiros.github.io</a>
                             </p>
                         </div>
                     </div>
@@ -1326,9 +1397,10 @@
 
                         <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                             <li class="ftco-animate"><a href="https://www.linkedin.com/in/elizeu-medeiros"
-                                    target="_blank"><span class="icon-linkedin"></span></a></li>
+                                    target="_blank" rel="noopener" aria-label="LinkedIn de Elizeu Medeiros"><span
+                                        class="icon-linkedin"></span></a></li>
 
-                            <li class="ftco-animate"><a href="https://github.com/Elizeu-Medeiros" target="_blank"><span
+                            <li class="ftco-animate"><a href="https://github.com/Elizeu-Medeiros" target="_blank" rel="noopener" aria-label="GitHub de Elizeu Medeiros"><span
                                         class="icon-github"></span></a></li>
                         </ul>
                     </div>
@@ -1354,12 +1426,12 @@
                             <ul>
                                 <li><span class="icon icon-map-marker"></span><span class="text"> Araruama, Rio de
                                         Janeiro, BR</span></li>-
-                                <li><a target="_blank"
+                                <li><a target="_blank" rel="noopener"
                                         href="https://wa.me/5521981317763/?text=Olá estou vindo através do seu portifólio no Github"><span
                                             class="icon icon-phone"></span><span class="text">+55 (21) 98131-7763
                                             &nbsp;</span> <span> <img src="images/WhatsApp.png" class="img-fluid"
                                                 alt="Meu Whatsapp" width="20" height="20"></span></a></li>
-                                <li><a href="mailto:elizeumedeiros@gmail.com" target="_blank"><span
+                                <li><a href="mailto:elizeumedeiros@gmail.com" target="_blank" rel="noopener"><span
                                             class="icon icon-envelope"></span><span
                                             class="text">elizeumedeiros@gmail.com</span></a></li>
                             </ul>
@@ -1376,7 +1448,7 @@
                             document.write(new Date().getFullYear());
                         </script> All rights reserved | <i class="icon-heart color-danger" aria-hidden="true"></i>
                         by
-                        <a href="https://elizeu-medeiros.github.io/portfolio/index.html" target="_blank">Elizeu
+                        <a href="https://elizeu-medeiros.github.io/portfolio/" target="_blank" rel="noopener">Elizeu
                             Medeiros</a>
                     </p>
                 </div>
