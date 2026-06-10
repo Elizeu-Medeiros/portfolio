@@ -1,20 +1,24 @@
- AOS.init({
- 	duration: 800,
- 	easing: 'slide'
- });
+ if (window.AOS) {
+ 	AOS.init({
+ 		duration: 800,
+ 		easing: 'slide'
+ 	});
+ }
 
 (function($) {
 
 	"use strict";
 
-	$(window).stellar({
-    responsive: true,
-    parallaxBackgrounds: true,
-    parallaxElements: true,
-    horizontalScrolling: false,
-    hideDistantElements: false,
-    scrollProperty: 'scroll'
-  });
+	if ($.fn.stellar) {
+		$(window).stellar({
+	    responsive: true,
+	    parallaxBackgrounds: true,
+	    parallaxElements: true,
+	    horizontalScrolling: false,
+	    hideDistantElements: false,
+	    scrollProperty: 'scroll'
+	  });
+	}
 
 
 	var fullHeight = function() {
@@ -38,7 +42,9 @@
 	loader();
 
 	// Scrollax
-   $.Scrollax();
+	if ($.Scrollax) {
+	  $.Scrollax();
+	}
 
 
 
@@ -51,8 +57,12 @@
 
 			if ( $('#ftco-nav').is(':visible') ) {
 				$(this).removeClass('active');
+				$('#ftco-nav').removeClass('show');
+				$(this).attr('aria-expanded', false);
 			} else {
 				$(this).addClass('active');	
+				$('#ftco-nav').addClass('show');
+				$(this).attr('aria-expanded', true);
 			}
 
 			
@@ -73,9 +83,12 @@
 
 	    $('html, body').animate({
 	        scrollTop: $($.attr(this, 'href')).offset().top - 70
-	    }, 500, function() {
-	    	// window.location.hash = href;
-	    });
+			}, 500, function() {
+		    	// window.location.hash = href;
+		    });
+
+	    $('.js-fh5co-nav-toggle').removeClass('active').attr('aria-expanded', false);
+	    $('#ftco-nav').removeClass('show');
 		});
 
 	};
@@ -84,6 +97,10 @@
 	
 
 	var carousel = function() {
+		if (!$.fn.owlCarousel || $('.home-slider').length === 0) {
+			return;
+		}
+
 		$('.home-slider').owlCarousel({
 	    loop:true,
 	    autoplay: true,
@@ -176,6 +193,13 @@
 	
 
 	var counter = function() {
+		if (!$.fn.waypoint || !$.animateNumber) {
+			$('.number').each(function(){
+				var $this = $(this);
+				$this.text($this.data('number'));
+			});
+			return;
+		}
 		
 		$('#section-counter, .hero-wrap, .ftco-counter, .ftco-about').waypoint( function( direction ) {
 
@@ -203,6 +227,11 @@
 
 
 	var contentWayPoint = function() {
+		if (!$.fn.waypoint) {
+			$('.ftco-animate').addClass('ftco-animated fadeInUp');
+			return;
+		}
+
 		var i = 0;
 		$('.ftco-animate').waypoint( function( direction ) {
 
@@ -238,36 +267,38 @@
 	};
 	contentWayPoint();
 
-	// magnific popup
-	$('.image-popup').magnificPopup({
-    type: 'image',
-    closeOnContentClick: true,
-    closeBtnInside: false,
-    fixedContentPos: true,
-    mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-     gallery: {
-      enabled: true,
-      navigateByImgClick: true,
-      preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-    },
-    image: {
-      verticalFit: true
-    },
-    zoom: {
-      enabled: true,
-      duration: 300 // don't foget to change the duration also in CSS
-    }
-  });
+		// magnific popup
+		if ($.fn.magnificPopup) {
+			$('.image-popup').magnificPopup({
+		    type: 'image',
+		    closeOnContentClick: true,
+		    closeBtnInside: false,
+		    fixedContentPos: true,
+		    mainClass: 'mfp-no-margins mfp-with-zoom',
+		     gallery: {
+		      enabled: true,
+		      navigateByImgClick: true,
+		      preload: [0,1]
+		    },
+		    image: {
+		      verticalFit: true
+		    },
+		    zoom: {
+		      enabled: true,
+		      duration: 300
+		    }
+		  });
 
-  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-    disableOn: 700,
-    type: 'iframe',
-    mainClass: 'mfp-fade',
-    removalDelay: 160,
-    preloader: false,
+		  $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+		    disableOn: 700,
+		    type: 'iframe',
+		    mainClass: 'mfp-fade',
+		    removalDelay: 160,
+		    preloader: false,
 
-    fixedContentPos: false
-  });
+		    fixedContentPos: false
+		  });
+		}
 
 
   var goHere = function() {
@@ -439,4 +470,3 @@ $(function() {
   }
 
 });
-
