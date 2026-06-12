@@ -1930,8 +1930,8 @@ textarea.form-control {
     color: #2447d8;
 }
 
-.linkedin-fallback-card {
-    display: none;
+.linkedin-profile-card {
+    display: flex;
     align-items: center;
     gap: 14px;
     max-width: 300px;
@@ -1942,18 +1942,14 @@ textarea.form-control {
     color: #fff;
 }
 
-.linkedin-fallback-card.is-visible {
-    display: flex;
-}
-
-.linkedin-fallback-card:hover,
-.linkedin-fallback-card:focus {
+.linkedin-profile-card:hover,
+.linkedin-profile-card:focus {
     color: #fff;
     background: rgba(255, 255, 255, .12);
     text-decoration: none;
 }
 
-.linkedin-fallback-card img {
+.linkedin-profile-card img {
     width: 72px;
     height: 72px;
     border-radius: 50%;
@@ -1961,18 +1957,18 @@ textarea.form-control {
     flex: 0 0 auto;
 }
 
-.linkedin-fallback-card strong,
-.linkedin-fallback-card small {
+.linkedin-profile-card strong,
+.linkedin-profile-card small {
     display: block;
 }
 
-.linkedin-fallback-card strong {
+.linkedin-profile-card strong {
     color: #fff;
     font-size: 18px;
     line-height: 1.25;
 }
 
-.linkedin-fallback-card small {
+.linkedin-profile-card small {
     margin-top: 6px;
     color: #93c5fd;
     font-size: 13px;

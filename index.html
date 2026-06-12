@@ -1321,14 +1321,7 @@
             <div class="row mb-5">
                 <div class="col-md">
                     <div class="ftco-footer-widget mb-4">
-                        <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium"
-                            data-theme="dark" data-type="VERTICAL" data-vanity="elizeu-medeiros-b2a0b348"
-                            data-version="v1">
-                            <a class="badge-base__link LI-simple-link"
-                                href="https://www.linkedin.com/in/elizeu-medeiros-b2a0b348?trk=profile-badge"
-                                target="_blank" rel="noopener">Elizeu Medeiros</a>
-                        </div>
-                        <a class="linkedin-fallback-card" href="https://www.linkedin.com/in/elizeu-medeiros-b2a0b348"
+                        <a class="linkedin-profile-card" href="https://www.linkedin.com/in/elizeu-medeiros-b2a0b348"
                             target="_blank" rel="noopener" aria-label="Perfil de Elizeu Medeiros no LinkedIn">
                             <img src="images/elizeu-medeiros.jpg" alt="Elizeu Medeiros" width="72" height="72"
                                 loading="lazy" decoding="async">
@@ -1441,32 +1434,6 @@
                 });
             });
         }
-    </script>
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <script>
-        window.addEventListener('load', function () {
-            var badge = document.querySelector('.LI-profile-badge');
-            var fallback = document.querySelector('.linkedin-fallback-card');
-
-            if (!badge || !fallback) {
-                return;
-            }
-
-            var updateLinkedInFallback = function () {
-                var hasRenderedBadge = badge.querySelector('iframe') || badge.offsetHeight > 80;
-                fallback.classList.toggle('is-visible', !hasRenderedBadge);
-            };
-
-            setTimeout(updateLinkedInFallback, 2500);
-            setTimeout(updateLinkedInFallback, 6000);
-
-            if ('MutationObserver' in window) {
-                new MutationObserver(updateLinkedInFallback).observe(badge, {
-                    childList: true,
-                    subtree: true
-                });
-            }
-        });
     </script>
 </body>
 
