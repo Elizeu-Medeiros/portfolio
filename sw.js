@@ -1,4 +1,4 @@
-var CACHE_VERSION = 'portfolio-static-v2';
+var CACHE_VERSION = 'portfolio-static-v4';
 var STATIC_CACHE = CACHE_VERSION + '-assets';
 var STATIC_ASSET_PATTERN = /\.(?:css|js|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|otf|eot|pdf)$/i;
 
@@ -15,8 +15,7 @@ var PRECACHE_URLS = [
     'css/ionicons.min.css',
     'css/flaticon.css',
     'css/icomoon.css',
-    'js/jquery.min.js',
-    'js/jquery-migrate-3.0.1.min.js',
+    'js/jquery-3.2.1.min.js',
     'js/popper.min.js',
     'js/bootstrap.min.js',
     'js/jquery.easing.1.3.js',
