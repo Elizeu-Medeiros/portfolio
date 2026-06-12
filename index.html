@@ -21,10 +21,6 @@
     <link rel="preload" href="css/open-iconic-bootstrap.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/animate.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/owl.carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/owl.theme.default.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <link rel="preload" href="css/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/flaticon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="css/icomoon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -32,10 +28,6 @@
     <noscript>
         <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
         <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <link rel="stylesheet" href="css/owl.theme.default.min.css">
-        <link rel="stylesheet" href="css/magnific-popup.css">
-        <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/ionicons.min.css">
         <link rel="stylesheet" href="css/flaticon.css">
         <link rel="stylesheet" href="css/icomoon.css">
@@ -1331,9 +1323,20 @@
                     <div class="ftco-footer-widget mb-4">
                         <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium"
                             data-theme="dark" data-type="VERTICAL" data-vanity="elizeu-medeiros-b2a0b348"
-                            data-version="v1"><a class="badge-base__link LI-simple-link"
-                                href="https://www.linkedin.com/in/elizeu-medeiros-b2a0b348?trk=profile-badge">Elizeu
-                                Medeiros</a></div>
+                            data-version="v1">
+                            <a class="badge-base__link LI-simple-link"
+                                href="https://www.linkedin.com/in/elizeu-medeiros-b2a0b348?trk=profile-badge"
+                                target="_blank" rel="noopener">Elizeu Medeiros</a>
+                        </div>
+                        <a class="linkedin-fallback-card" href="https://www.linkedin.com/in/elizeu-medeiros-b2a0b348"
+                            target="_blank" rel="noopener" aria-label="Perfil de Elizeu Medeiros no LinkedIn">
+                            <img src="images/elizeu-medeiros.jpg" alt="Elizeu Medeiros" width="72" height="72"
+                                loading="lazy" decoding="async">
+                            <span>
+                                <strong>Elizeu Medeiros</strong>
+                                <small>Ver perfil no LinkedIn</small>
+                            </span>
+                        </a>
 
                         <!-- <h2 class="ftco-heading-2">Serviços</h2>
                         <ul class="list-unstyled">
@@ -1425,19 +1428,10 @@
     </div>
 
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.1.3.js"></script>
-    <script src="js/jquery.waypoints.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/aos.js"></script>
-    <script src="js/jquery.animateNumber.min.js"></script>
-    <script src="js/scrollax.min.js"></script>
-
-    <script src="js/main.js"></script>
+    <script src="js/jquery-3.2.1.min.js" defer></script>
+    <script src="js/jquery.waypoints.min.js" defer></script>
+    <script src="js/jquery.animateNumber.min.js" defer></script>
+    <script src="js/main.js" defer></script>
 
     <script>
         if ('serviceWorker' in navigator) {
@@ -1448,9 +1442,32 @@
             });
         }
     </script>
-
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+    <script>
+        window.addEventListener('load', function () {
+            var badge = document.querySelector('.LI-profile-badge');
+            var fallback = document.querySelector('.linkedin-fallback-card');
 
+            if (!badge || !fallback) {
+                return;
+            }
+
+            var updateLinkedInFallback = function () {
+                var hasRenderedBadge = badge.querySelector('iframe') || badge.offsetHeight > 80;
+                fallback.classList.toggle('is-visible', !hasRenderedBadge);
+            };
+
+            setTimeout(updateLinkedInFallback, 2500);
+            setTimeout(updateLinkedInFallback, 6000);
+
+            if ('MutationObserver' in window) {
+                new MutationObserver(updateLinkedInFallback).observe(badge, {
+                    childList: true,
+                    subtree: true
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

@@ -1,4 +1,4 @@
-var CACHE_VERSION = 'portfolio-static-v4';
+var CACHE_VERSION = 'portfolio-static-v7';
 var STATIC_CACHE = CACHE_VERSION + '-assets';
 var STATIC_ASSET_PATTERN = /\.(?:css|js|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|otf|eot|pdf)$/i;
 
@@ -8,24 +8,12 @@ var PRECACHE_URLS = [
     'css/style.css',
     'css/open-iconic-bootstrap.min.css',
     'css/animate.css',
-    'css/owl.carousel.min.css',
-    'css/owl.theme.default.min.css',
-    'css/magnific-popup.css',
-    'css/aos.css',
     'css/ionicons.min.css',
     'css/flaticon.css',
     'css/icomoon.css',
     'js/jquery-3.2.1.min.js',
-    'js/popper.min.js',
-    'js/bootstrap.min.js',
-    'js/jquery.easing.1.3.js',
     'js/jquery.waypoints.min.js',
-    'js/jquery.stellar.min.js',
-    'js/owl.carousel.min.js',
-    'js/jquery.magnific-popup.min.js',
-    'js/aos.js',
     'js/jquery.animateNumber.min.js',
-    'js/scrollax.min.js',
     'js/main.js',
     'images/elizeu-medeiros.jpg',
     'images/WhatsApp.png',

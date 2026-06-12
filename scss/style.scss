@@ -1929,3 +1929,52 @@ textarea.form-control {
 .tech-heading span {
     color: #2447d8;
 }
+
+.linkedin-fallback-card {
+    display: none;
+    align-items: center;
+    gap: 14px;
+    max-width: 300px;
+    padding: 14px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .14);
+    border-radius: 10px;
+    color: #fff;
+}
+
+.linkedin-fallback-card.is-visible {
+    display: flex;
+}
+
+.linkedin-fallback-card:hover,
+.linkedin-fallback-card:focus {
+    color: #fff;
+    background: rgba(255, 255, 255, .12);
+    text-decoration: none;
+}
+
+.linkedin-fallback-card img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex: 0 0 auto;
+}
+
+.linkedin-fallback-card strong,
+.linkedin-fallback-card small {
+    display: block;
+}
+
+.linkedin-fallback-card strong {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.25;
+}
+
+.linkedin-fallback-card small {
+    margin-top: 6px;
+    color: #93c5fd;
+    font-size: 13px;
+    font-weight: 700;
+}
