@@ -1,4 +1,4 @@
-var CACHE_VERSION = 'portfolio-static-v7';
+var CACHE_VERSION = 'portfolio-static-v9';
 var STATIC_CACHE = CACHE_VERSION + '-assets';
 var STATIC_ASSET_PATTERN = /\.(?:css|js|png|jpg|jpeg|gif|svg|webp|ico|woff2?|ttf|otf|eot|pdf)$/i;
 
@@ -16,7 +16,6 @@ var PRECACHE_URLS = [
     'js/jquery.animateNumber.min.js',
     'js/main.js',
     'images/elizeu-medeiros.jpg',
-    'images/WhatsApp.png',
     'images/bg_1.jpg',
     'images/laravel-logo.png',
     'images/codeigniter-logo.png',

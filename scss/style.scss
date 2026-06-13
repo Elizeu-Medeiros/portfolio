@@ -1930,6 +1930,21 @@ textarea.form-control {
     color: #2447d8;
 }
 
+.js-fullheight {
+    min-height: 100vh;
+}
+
+.ftco-about .img-about {
+    aspect-ratio: 1;
+    min-height: 320px;
+}
+
+.ftco-about .img-about .about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .linkedin-profile-card {
     display: flex;
     align-items: center;
